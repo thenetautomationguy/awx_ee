@@ -1,0 +1,12 @@
+---
+version: 3
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+
+additional_build_steps:
+  prepend_base:
+    - RUN yum update -y
+    - RUN yum -y install xorriso
+    - RUN yum -y install sshpass
+    - RUN yum -y install zip
