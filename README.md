@@ -51,7 +51,6 @@ awx_fortinet_ee:
 ```
 
 ### Github Container Registry ghcr.io
-
 If you want to use GitHub as a Container Registry, create the folder '.github' with the subfolder 'workflows' and then create the YAML file with the following content: (e.g., .github/workflows/publish.yml)
 
 ```
@@ -69,7 +68,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
           run:
-            working-directory: './awx_fortinet_ee'
+            working-directory: './awx_fortinet_ee/context'
         steps:
           - name: 'Checkout GitHub Action'
             uses: actions/checkout@main
@@ -87,3 +86,6 @@ jobs:
               docker push ghcr.io/thenetautomationquy/awx_fortinet_ee:latest
 
 ```
+
+## Packages on ghcr.io
+The AWX EE 'awx_fortinet_ee' can be used freely and is accessible at https://ghcr.io/thenetautomationquy/awx_fortinet_ee:latest.
