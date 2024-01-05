@@ -87,5 +87,24 @@ jobs:
 
 ```
 
+
+### Red Hat Quay quay.io 
+If you want to use quay.io as a container registry, proceed as follows.
+
+1. Create an image:
+```
+ansible-builder build --context ./context --container-runtime docker --tag quay.io/thenetautomationquy/awx_fortinet_ee:latest       
+```
+
+2. Log in to quay.io:
+```
+docker login quay.io
+```
+
+3. Push the image:
+```
+docker push quay.io/thenetautomationquy/awx_fortinet_ee:latest   
+```
+
 ## Packages on ghcr.io
 The AWX EE 'awx_fortinet_ee' can be used freely and is accessible at https://ghcr.io/thenetautomationquy/awx_fortinet_ee:latest.
